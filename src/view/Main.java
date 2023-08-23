@@ -4,6 +4,8 @@
  */
 package view;
 
+import model.Agendamento;
+import model.Cliente;
 import model.Servico;
 
 /**
@@ -17,5 +19,9 @@ public class Main {
         Servico barba = new Servico(1, "barba", 20);
         
         System.out.println(barba.getDescricao());
+
+        Cliente cliente = new Cliente("Rua A2", "490000", 1, "Leonardo");
+        Agendamento agendamento = new Agendamento(1, cliente, barba, 36, "23/08/2023 18:45");
+        System.out.println(agendamento.getCliente().getNome());
     }
 }

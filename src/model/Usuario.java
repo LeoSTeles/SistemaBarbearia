@@ -10,7 +10,7 @@ import java.util.Date;
  *
  * @author leona
  */
-abstract public class Usuario extends Pessoa{
+public class Usuario extends Pessoa{
     private String senha,nivelAcesso;
 
     public Usuario(String senha, String nivelAcesso, int id, String nome, String email, String rg, String telefone, char sexo, String dataNascimento) {

@@ -14,7 +14,7 @@ import java.util.logging.Logger;
  *
  * @author leona
  */
-public class Pessoa {
+abstract public class Pessoa {
     protected int id;
     protected String nome,email,rg,telefone;
     protected char sexo;
