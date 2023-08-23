@@ -13,7 +13,7 @@ import java.util.Date;
 public class Cliente extends Pessoa{
     private String endereco,cep;
 
-    public Cliente(String endereco, String cep, int id, String nome, String email, String rg, String telefone, char sexo, String dataNascimento) {
+    public Cliente( int id, String nome, char sexo, String dataNascimento, String email, String endereco, String cep, String rg, String telefone) {
         super(id, nome, email, rg, telefone, sexo, dataNascimento);
         this.endereco = endereco;
         this.cep = cep;
