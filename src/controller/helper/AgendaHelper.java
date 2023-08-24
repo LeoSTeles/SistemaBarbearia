@@ -58,22 +58,39 @@ public class AgendaHelper implements iHelper{
         }
     }
 
+    public Cliente obterCliente(){
+        return (Cliente) view.getComboBoxClientes().getSelectedItem();
+    }
+    
     public Servico obterServico() {
         return (Servico) view.getComboBoxServicos().getSelectedItem();
     }
 
     public void setarValor(float valor) {
-        view.getTextValor().setText("R$" + valor);
+        view.getTextValor().setText(valor+"");
     }
 
     @Override
     public Agendamento obterModelo() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        int id = Integer.parseInt(view.getTextId().getText());
+        Cliente cliente = this.obterCliente();
+        Servico servico = this.obterServico();
+        float valor = Float.parseFloat(view.getTextValor().getText());
+        String data = view.getTextFormatedData().getText();
+        String hora = view.getTextFormatedHora().getText();
+        String observacao = view.getTextObservacao().getText();
+        String dataHora = data + " " + hora;
+        Agendamento agendamento = new Agendamento(id,cliente,servico,valor,dataHora,observacao);
+        
+        return agendamento;
     }
 
     @Override
     public void limparTela() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        view.getTextId().setText("");
+        view.getTextFormatedHora().setText("");
+        view.getTextFormatedData().setText("");
+        view.getTextObservacao().setText("");
     }
     
     

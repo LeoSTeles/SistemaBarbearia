@@ -7,7 +7,9 @@ package view;
 
 import controller.AgendaController;
 import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 /**
@@ -121,7 +123,12 @@ public class Agenda extends javax.swing.JFrame {
         });
         getContentPane().add(TextValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 280, 40));
 
-        TextFormatedData.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter()));
+        TextFormatedData.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
+        TextFormatedData.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextFormatedDataActionPerformed(evt);
+            }
+        });
         getContentPane().add(TextFormatedData, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 470, 280, 40));
 
         TextFormatedHora.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getTimeInstance(java.text.DateFormat.SHORT))));
@@ -180,6 +187,10 @@ public class Agenda extends javax.swing.JFrame {
     private void ComboBoxServicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBoxServicosActionPerformed
         this.controller.atualizaValor();
     }//GEN-LAST:event_ComboBoxServicosActionPerformed
+
+    private void TextFormatedDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFormatedDataActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextFormatedDataActionPerformed
 
     /**
      * @param args the command line arguments
@@ -276,6 +287,38 @@ public class Agenda extends javax.swing.JFrame {
 
     public void setTextValor(JTextField TextValor) {
         this.TextValor = TextValor;
+    }
+
+    public JFormattedTextField getTextFormatedData() {
+        return TextFormatedData;
+    }
+
+    public void setTextFormatedData(JFormattedTextField TextFormatedData) {
+        this.TextFormatedData = TextFormatedData;
+    }
+
+    public JFormattedTextField getTextFormatedHora() {
+        return TextFormatedHora;
+    }
+
+    public void setTextFormatedHora(JFormattedTextField TextFormatedHora) {
+        this.TextFormatedHora = TextFormatedHora;
+    }
+
+    public JTextField getTextId() {
+        return TextId;
+    }
+
+    public void setTextId(JTextField TextId) {
+        this.TextId = TextId;
+    }
+
+    public JTextArea getTextObservacao() {
+        return TextObservacao;
+    }
+
+    public void setTextObservacao(JTextArea TextObservacao) {
+        this.TextObservacao = TextObservacao;
     }
     
     
