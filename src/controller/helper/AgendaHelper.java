@@ -16,7 +16,7 @@ import view.Agenda;
  *
  * @author leona
  */
-public class AgendaHelper {
+public class AgendaHelper implements iHelper{
     private final Agenda view;
 
     public AgendaHelper(Agenda view) {
@@ -56,6 +56,24 @@ public class AgendaHelper {
         for (Servico servico : servicos) {
             comboBoxModel.addElement(servico);
         }
+    }
+
+    public Servico obterServico() {
+        return (Servico) view.getComboBoxServicos().getSelectedItem();
+    }
+
+    public void setarValor(float valor) {
+        view.getTextValor().setText("R$" + valor);
+    }
+
+    @Override
+    public Agendamento obterModelo() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void limparTela() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
     

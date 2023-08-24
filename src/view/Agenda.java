@@ -8,6 +8,7 @@ package view;
 import controller.AgendaController;
 import javax.swing.JComboBox;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 
 /**
  *
@@ -104,6 +105,11 @@ public class Agenda extends javax.swing.JFrame {
 
         getContentPane().add(ComboBoxClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 280, 40));
 
+        ComboBoxServicos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboBoxServicosActionPerformed(evt);
+            }
+        });
         getContentPane().add(ComboBoxServicos, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 280, 40));
 
         TextValor.setText("0");
@@ -164,12 +170,16 @@ public class Agenda extends javax.swing.JFrame {
     }//GEN-LAST:event_TextIdActionPerformed
 
     private void ButtonAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAgendarActionPerformed
-        // TODO add your handling code here:
+        this.controller.agendar();
     }//GEN-LAST:event_ButtonAgendarActionPerformed
 
     private void TextValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextValorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TextValorActionPerformed
+
+    private void ComboBoxServicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBoxServicosActionPerformed
+        this.controller.atualizaValor();
+    }//GEN-LAST:event_ComboBoxServicosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -258,6 +268,14 @@ public class Agenda extends javax.swing.JFrame {
 
     public void setComboBoxServicos(JComboBox<String> ComboBoxServicos) {
         this.ComboBoxServicos = ComboBoxServicos;
+    }
+
+    public JTextField getTextValor() {
+        return TextValor;
+    }
+
+    public void setTextValor(JTextField TextValor) {
+        this.TextValor = TextValor;
     }
     
     

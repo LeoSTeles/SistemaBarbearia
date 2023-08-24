@@ -51,4 +51,14 @@ public class AgendaController {
         //Exibir os servicos no combobox servico
         helper.preencherServicos(servicos);
     }
+    
+    public void atualizaValor(){
+        Servico servico = helper.obterServico();
+        helper.setarValor(servico.getValue());
+    }
+    
+    public void agendar(){
+        //Buscar objeto agendamento da tela
+        //Salvar objeto no banco de dados
+    }
 }
