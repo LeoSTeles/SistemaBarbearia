@@ -44,6 +44,9 @@ public class Servico {
     }
     
     
-    
+    @Override
+   public String toString(){
+       return getDescricao();
+   }
     
 }

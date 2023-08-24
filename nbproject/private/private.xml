@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/leona/OneDrive/Documentos/NetBeansProjects/BarberShop/src/model/Usuario.java</file>
-            <file>file:/C:/Users/leona/OneDrive/Documentos/NetBeansProjects/BarberShop/src/model/Cliente.java</file>
-            <file>file:/C:/Users/leona/OneDrive/Documentos/NetBeansProjects/BarberShop/src/model/Pessoa.java</file>
-            <file>file:/C:/Users/leona/OneDrive/Documentos/NetBeansProjects/BarberShop/src/view/Main.java</file>
+            <file>file:/C:/Users/leona/OneDrive/Documentos/NetBeansProjects/BarberShop/src/view/MenuPrincipal.java</file>
+            <file>file:/C:/Users/leona/OneDrive/Documentos/NetBeansProjects/BarberShop/src/view/Login.java</file>
+            <file>file:/C:/Users/leona/OneDrive/Documentos/NetBeansProjects/BarberShop/src/controller/MenuPrincipalController.java</file>
+            <file>file:/C:/Users/leona/OneDrive/Documentos/NetBeansProjects/BarberShop/src/controller/LoginController.java</file>
         </group>
     </open-files>
 </project-private>
